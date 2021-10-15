@@ -8,9 +8,10 @@
     "test": "tests"
   },
   "scripts": {
-    "createPackage": "npm pack && tar xf detabase-models*.tgz && tree package",
+    "clean": "rm -rf package",
+    "createPackage": "npm run clean && npm pack && tar xf detabase-models*.tgz && tree package",
     "lint": "npm run eslint",
-    "test": "node_modules/.bin/mocha test/*.test.js",
+    "test": "node_modules/.bin/mocha tests/*.test.js",
     "prettier:cli": "prettier \"**/*.js\"",
     "prettier:check": "npm run prettier:cli -- -l",
     "prettier:fix": "npm run prettier:cli -- --write"
