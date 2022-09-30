@@ -44,7 +44,7 @@ const Person = new Model("person",[
         type: "boolean"
     }
 ]);
-module.exports = Score;
+module.exports = Person;
 
 /**
  Supported types are
